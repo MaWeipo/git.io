@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Nginx学习笔记 · Mai</title><meta name="description" content="Nginx学习笔记 - John Doe"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/git.io/favicon.png"><link rel="stylesheet" href="/git.io/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://maweipo.github.io/git.io/atom.xml" title="Mai"><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/git.io/atom.xml" title="Mai" type="application/atom+xml">
+</head><body><div class="wrap"><header><a href="/git.io/" class="logo-link"><img src="/git.io/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/git.io/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/git.io/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/sunchongsheng" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/pinggod" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/git.io/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Nginx学习笔记</h1><div class="post-info">Mar 22, 2024</div><div class="post-content"><p>nginx学习笔记</p>
+<span id="more"></span>
+
+<p>一直以来都没有系统地学习过nginx，部署服务往往是CSDN上CV几个nginx的配置文件就放服务器上跑。</p>
+<ul>
+<li>​    哎嘿跑起来了，那不管了。🤫</li>
+<li>​    怎么跑不起来，这配置文件我咋看不懂🤡</li>
+</ul>
+<p>基础不牢地动山摇，还是系统地学一遍吧</p>
+<h1 id="什么是Nginx"><a href="#什么是Nginx" class="headerlink" title="什么是Nginx"></a>什么是Nginx</h1><p>Nginx是一款轻量级的Web服务器、反向代理服务器，因内存占用少，启动极快、高并发能力强而被广泛应用。</p>
+<p>常用命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 立即停止</span></span><br><span class="line">nginx -s stop</span><br><span class="line"><span class="comment"># 执行完请求后停止</span></span><br><span class="line">nginx -s quit</span><br><span class="line"><span class="comment"># 重新加载配置</span></span><br><span class="line">nginx -s reload</span><br><span class="line"><span class="comment"># 将日志写入新的文件</span></span><br><span class="line">nginx -s reopen</span><br><span class="line"><span class="comment"># 测试配置文件</span></span><br><span class="line">nginx -t</span><br></pre></td></tr></table></figure>
+
+<p>在Docker中，nginx的配置文件位置：</p>
+<p>log位于&#x2F;var&#x2F;log&#x2F;nginx&#x2F;</p>
+<p>html位于&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html</p>
+</div></article></div></main><footer><div class="paginator"><a href="/git.io/2024/03/22/hello-world/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2024 <a href="https://maweipo.github.io/git.io">John Doe</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
