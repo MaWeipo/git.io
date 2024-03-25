@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://maweipo.github.io/git.io/2024/03/22/nginx%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    
-    <lastmod>2024-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://maweipo.github.io/git.io/2024/03/22/hello-world/</loc>
     
     <lastmod>2024-03-22</lastmod>
@@ -22,26 +13,12 @@
 
   <url>
     <loc>https://maweipo.github.io/git.io</loc>
-    <lastmod>2024-03-22</lastmod>
+    <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
-  <url>
-    <loc>https://maweipo.github.io/git.io/tags/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2024-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
-  
-  <url>
-    <loc>https://maweipo.github.io/git.io/categories/web/</loc>
-    <lastmod>2024-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
 </urlset>

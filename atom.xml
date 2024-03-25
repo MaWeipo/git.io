@@ -6,7 +6,7 @@
   <link href="https://maweipo.github.io/git.io/atom.xml" rel="self"/>
   
   <link href="https://maweipo.github.io/git.io/"/>
-  <updated>2024-03-22T13:58:53.069Z</updated>
+  <updated>2024-03-22T13:16:58.464Z</updated>
   <id>https://maweipo.github.io/git.io/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Nginx学习笔记</title>
-    <link href="https://maweipo.github.io/git.io/2024/03/22/nginx%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://maweipo.github.io/git.io/2024/03/22/nginx%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
-    <published>2024-03-22T13:46:05.620Z</published>
-    <updated>2024-03-22T13:58:53.069Z</updated>
-    
-    <content type="html"><![CDATA[<p>nginx学习笔记</p><span id="more"></span><p>一直以来都没有系统地学习过nginx，部署服务往往是CSDN上CV几个nginx的配置文件就放服务器上跑。</p><ul><li>​    哎嘿跑起来了，那不管了。🤫</li><li>​    怎么跑不起来，这配置文件我咋看不懂🤡</li></ul><p>基础不牢地动山摇，还是系统地学一遍吧</p><h1 id="什么是Nginx"><a href="#什么是Nginx" class="headerlink" title="什么是Nginx"></a>什么是Nginx</h1><p>Nginx是一款轻量级的Web服务器、反向代理服务器，因内存占用少，启动极快、高并发能力强而被广泛应用。</p><p>常用命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 立即停止</span></span><br><span class="line">nginx -s stop</span><br><span class="line"><span class="comment"># 执行完请求后停止</span></span><br><span class="line">nginx -s quit</span><br><span class="line"><span class="comment"># 重新加载配置</span></span><br><span class="line">nginx -s reload</span><br><span class="line"><span class="comment"># 将日志写入新的文件</span></span><br><span class="line">nginx -s reopen</span><br><span class="line"><span class="comment"># 测试配置文件</span></span><br><span class="line">nginx -t</span><br></pre></td></tr></table></figure><p>在Docker中，nginx的配置文件位置：</p><p>log位于&#x2F;var&#x2F;log&#x2F;nginx&#x2F;</p><p>html位于&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;nginx学习笔记&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="web" scheme="https://maweipo.github.io/git.io/categories/web/"/>
-    
-    
-    <category term="学习" scheme="https://maweipo.github.io/git.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
