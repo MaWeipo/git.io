@@ -6,7 +6,7 @@
   <link href="https://maweipo.github.io/git.io/atom.xml" rel="self"/>
   
   <link href="https://maweipo.github.io/git.io/"/>
-  <updated>2024-03-22T13:16:58.464Z</updated>
+  <updated>2024-03-25T14:14:03.422Z</updated>
   <id>https://maweipo.github.io/git.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每日随笔</title>
+    <link href="https://maweipo.github.io/git.io/2024/03/25/%E6%AF%8F%E6%97%A5%E9%9A%8F%E7%AC%94-2024-03-25/"/>
+    <id>https://maweipo.github.io/git.io/2024/03/25/%E6%AF%8F%E6%97%A5%E9%9A%8F%E7%AC%94-2024-03-25/</id>
+    <published>2024-03-24T16:00:00.000Z</published>
+    <updated>2024-03-25T14:14:03.422Z</updated>
+    
+    <content type="html"><![CDATA[<p>我之前在设计评测机的时候，对于<strong>如何统一管理样例文件</strong>这个问题感到很困惑。为了让代码沙箱能够读取到输入文件的内容，在一次挂载实验中，我把样例文件挂载到沙箱容器中，这样做成功使沙箱读取输入内容并执行代码。但是判题系统在调用完沙箱后，自身还需要读取输出文件的内容，将其拿来和沙箱结果进行比对，<br>那么问题来了，输出文件去哪里读呢，跑到沙箱容器里面去拿吗？我开始陷入迷茫</p><h2 id="如何管理样例文件"><a href="#如何管理样例文件" class="headerlink" title="如何管理样例文件"></a>如何管理样例文件</h2><p>我开始反复阅读HOJ代码，试图理解他是如何设计判题机的工作机制。可能有用的信息：<br>1、通过执行结果 和 输出文件内容进行MD5加密对比<br>2、语言配置是放在yml中，降低了数据库操作的频率<br>3、输出输出文件的路径是保存在数据库当中的，比如&#x2F;judge&#x2F;case&#x2F;xxx&#x2F;in&#x2F;0.in这个路径，是相对于谁的，打包好的jar包该如何读取</p><p>看完还是没什么头绪，决定从导入题目模块继续看下去</p><p>我开始理解这一切了：<strong>样例文件其实一直存放于在宿主机当中</strong>，在运行时将其分别挂载到沙箱和评测服务的容器中。沙箱的读入已经通过挂载实验验证可行性，JAR 文件内的代码尝试读取 &#x2F;judge&#x2F;case 这个路径时，它实际上会访问容器系统内的 &#x2F;judge&#x2F;case 路径，而不是 JAR 包内的路径，它对于文件的操作是相对容器而非jar。</p><p>当多个容器同时挂载同一份目录时，它们将共享这个目录的访问权限和数据。这意味着在其中一个容器中对挂载目录所做的任何更改（如添加、删除或修改文件）都会立即反映到另一个容器中，因为两个容器实际上都在访问相同的宿主机目录。</p><p>这样就确保了其他服务导入题目时，沙箱和判题机能够得到更新</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;我之前在设计评测机的时候，对于&lt;strong&gt;如何统一管理样例文件&lt;/strong&gt;这个问题感到很困惑。为了让代码沙箱能够读取到输入文件的内容，在一次挂载实验中，我把样例文件挂载到沙箱容器中，这样做成功使沙箱读取输入内容并执行代码。但是判题系统在调用完沙箱后，自身还需要读取</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
